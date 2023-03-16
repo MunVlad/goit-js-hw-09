@@ -46,13 +46,13 @@ function alertWrongDate() {
 
 function updateCounter(countdownTime) {
   const { days, hours, minutes, seconds } = convertMs(countdownTime);
-  daysEL.textContent = pad(days);
-  hoursEL.textContent = pad(hours);
-  minutesEL.textContent = pad(minutes);
-  secondsEL.textContent = pad(seconds);
+  daysEL.textContent = addLeadingZero(days);
+  hoursEL.textContent = addLeadingZero(hours);
+  minutesEL.textContent = addLeadingZero(minutes);
+  secondsEL.textContent = addLeadingZero(seconds);
 }
 
-function pad(value) {
+function addLeadingZero(value) {
   return String(value).padStart(2, '0');
 }
 
